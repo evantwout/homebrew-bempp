@@ -19,5 +19,6 @@ class dune-common < Formula
       system "make","install"
     end
    end
+end
 
     
