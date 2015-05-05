@@ -1,21 +1,21 @@
-class DuneCommon < Formula
+class DuneGeometry < Formula
   homepage "https://www.dune-project.org"
-  url "http://www.dune-project.org/download/2.3.1/dune-grid-2.3.1.tar.gz"
-  sha256 "f565d3c2562275cba317adef74f75b0a4f6f130abf4e9e1c34712bc9ab63ab03"
+  url "http://www.dune-project.org/download/2.3.1/dune-geometry-2.3.1.tar.gz"
+  sha256 "caf8f55b79e3217c3e845a9ada48b51a57f090cbbd4e6994e72067f3449b565c"
 
   depends_on :fortran
   depends_on "cmake"
   depends_on "bempp/bempp/dune-common"
 
-  patch :p1 do
-    url "http://www.bempp.org/files/dune/dune_grid_cmake.patch"
-    sha256 "ff1f02cba57c9524658c1c06d0196af375e5f4689d1e992ad2511e4eb9f17c07"
+  patch :p2 do
+    url "http://www.bempp.org/files/dune/dune_geometry_cmake.patch"
+    sha256 "9e20fcd20ef963a649d997a473fafc158904d634403e31bb5b9f192f9bf0e21e"
   end
 
   def install
 
     mkdir "build" do
-      system "cmake", "..",*std_cmake_args
+      system "cmake", "-DBUILD_SHARED_LIBS=TRUE","..",*std_cmake_args
       system "make"
       system "make","install"
     end

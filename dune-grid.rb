@@ -6,6 +6,7 @@ class DuneGrid < Formula
   depends_on :fortran
   depends_on "cmake"
   depends_on "bempp/bempp/dune-common"
+  depends_on "bempp/bempp/dune-geometry"
 
   patch :p1 do
     url "http://www.bempp.org/files/dune/dune_grid_cmake.patch"
@@ -15,7 +16,7 @@ class DuneGrid < Formula
   def install
 
     mkdir "build" do
-      system "cmake", "..",*std_cmake_args
+      system "cmake", "-DBUILD_SHARED_LIBS=TRUE","..",*std_cmake_args
       system "make"
       system "make","install"
     end
