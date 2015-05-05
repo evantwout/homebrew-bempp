@@ -1,4 +1,4 @@
-class DuneCommon < Formula
+class dune-common < Formula
   homepage "https://www.dune-project.org"
   url "http://www.dune-project.org/download/2.3.1/dune-common-2.3.1.tar.gz"
   sha256 "040cd3811d195631cfa99fab43443d69c1b83f82737b0cd98e4f330ec84051f5"
