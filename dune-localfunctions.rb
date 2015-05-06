@@ -8,6 +8,11 @@ class DuneLocalfunctions < Formula
   depends_on "bempp/bempp/dune-common"
   depends_on "bempp/bempp/dune-geometry"
 
+  patch :p0 do
+    url "http://www.bempp.org/files/dune/dune_localfunctions.patch"
+    sha256 "f58401065724cf014406a41f8ab88eea89f07903b10c107e179e6fd28a5ff087"
+  end
+
   def install
 
     mkdir "build" do
