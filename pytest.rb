@@ -11,17 +11,13 @@ class Pytest < Formula
   end
 
   def install
-    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python2.7/site-packages"
     %w[py].each do |r|
       resource(r).stage do
-        system "python", *Language::Python.setup_install_args(libexec/"vendor")
+        system "python", *Language::Python.setup_install_args(prefix)
       end
     end
 
-    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python2.7/site-packages"
-    system "python", *Language::Python.setup_install_args(libexec)
+    system "python", *Language::Python.setup_install_args(prefix)
 
-    bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
   end
 end

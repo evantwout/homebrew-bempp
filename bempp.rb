@@ -1,6 +1,14 @@
 class Bempp < Formula
   homepage "http://www.bempp.org"
-  head "https://github.com/bempp/bempp.git", :branch => "development"
+  url "https://github.com/bempp/bempp.git", :using => :git
+
+  version "2.9.1"
+
+  devel do
+      url "https://github.com/bempp/bempp.git", :using => :git, :branch => "development"
+      version "2.9.1"
+  end
+
 
   depends_on :python
   depends_on "numpy" => :python
@@ -19,14 +27,18 @@ class Bempp < Formula
   depends_on "bempp/bempp/mako"
   depends_on "bempp/bempp/cython"
   
-
-
-
   def install
 
     mkdir "build" do
-      system "cmake", "..",*std_cmake_args
-      system "make"
+      args = std_cmake_args
+      args.delete "-DCMAKE_CXX_FLAGS_RELEASE="
+      args.delete "-DCMAKE_C_FLAGS_RELEASE="
+      args << "-DCMAKE_C_FLAGS_RELEASE=-O3 -march=native"
+      args << "-DCMAKE_CXX_FLAGS_RELEASE=-O3 -march=native"
+      args << "-DWITH_TESTS=OFF"
+      args << ".."
+
+      system "cmake", *args
       system "make","install"
     end
    end
