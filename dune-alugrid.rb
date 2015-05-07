@@ -1,11 +1,16 @@
 class DuneAlugrid < Formula
   homepage "http://users.dune-project.org/projects/dune-alugrid"
-  url "http://www.bempp.org/files/dune/alugrid-2.3.1.tar.gz"
-  sha256 "3ed1894839a4e35d4c633533d1ad11b92f4ecc33a15068d9efa9ae6188394510"
+  url "http://users.dune-project.org/repositories/projects/dune-alugrid.git", :using => :git, :revision => "95c07ef8c80c2ea6f19c441eedf997507e40cde4"
+
+  version "2.3-dev"
 
   depends_on "cmake"
   depends_on "bempp/bempp/dune-grid"
 
+  patch :p1 do
+    url "http://www.bempp.org/files/dune/alugrid_cmake.patch"
+    sha256 "7710e8ab5855b164c1e2b9b650ebdb1ff8d810e2a4dd3e219ee44d7ef97075dd"
+  end
     
   def install
 
