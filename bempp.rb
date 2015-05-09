@@ -22,7 +22,7 @@ class Bempp < Formula
   depends_on "cmake"
   depends_on "bempp/bempp/dune-grid"
   depends_on "bempp/bempp/dune-localfunctions"
-  depends_on "bempp/bempp/dune-alugrid"
+  depends_on "bempp/bempp/dune-foamgrid"
   depends_on "bempp/bempp/pytest"
   depends_on "bempp/bempp/mako"
   depends_on "bempp/bempp/cython"
