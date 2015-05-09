@@ -8,7 +8,7 @@ class DuneAlugrid < Formula
   depends_on "bempp/bempp/dune-grid"
 
   patch :p1 do
-    url "http://www.bempp.org/files/dune/alugrid_cmake.patch"
+    url "https://github.com/bempp/homebrew-patches/raw/master/alugrid_cmake.patch"
     sha256 "7710e8ab5855b164c1e2b9b650ebdb1ff8d810e2a4dd3e219ee44d7ef97075dd"
   end
     

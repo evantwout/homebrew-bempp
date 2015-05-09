@@ -6,12 +6,12 @@ class DuneCommon < Formula
   depends_on "cmake"
 
   patch :p1 do
-    url "http://www.bempp.org/files/dune/dune_common_cmake.patch"
+    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_common_cmake.patch"
     sha256 "44d048d3c1e2da5f6820da963d01f66897b802c6a3a48b34182cfa3251e78d67"
   end
 
   patch :p1 do
-    url "http://www.bempp.org/files/dune/dune_disable_fortran.patch"
+    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_disable_fortran.patch"
     sha256 "2ee5fb8b51ea7606b03c0abc0631148dac0b879784b2e67e9bb29f3f2f3e44bc"
   end
 

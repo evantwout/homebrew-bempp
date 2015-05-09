@@ -7,7 +7,7 @@ class DuneGeometry < Formula
   depends_on "bempp/bempp/dune-common"
 
   patch :p2 do
-    url "http://www.bempp.org/files/dune/dune_geometry_cmake.patch"
+    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_geometry_cmake.patch"
     sha256 "9e20fcd20ef963a649d997a473fafc158904d634403e31bb5b9f192f9bf0e21e"
   end
 

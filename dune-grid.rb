@@ -8,15 +8,10 @@ class DuneGrid < Formula
   depends_on "bempp/bempp/dune-geometry"
 
   patch :p1 do
-    url "http://www.bempp.org/files/dune/dune_grid_cmake.patch"
+    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_grid_cmake.patch"
     sha256 "ff1f02cba57c9524658c1c06d0196af375e5f4689d1e992ad2511e4eb9f17c07"
   end
 
-  patch :p0 do
-    url "http://www.bempp.org/files/dune/dune_grid_alberta.patch"
-    sha256 "ae86a6af39f9f6f97407a8566807e7def7e3bc1e381777caacb514cc0b75d0b6"
-  end
-    
   def install
 
     mkdir "build" do
