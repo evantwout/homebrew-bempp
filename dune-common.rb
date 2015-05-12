@@ -4,6 +4,7 @@ class DuneCommon < Formula
   sha256 "040cd3811d195631cfa99fab43443d69c1b83f82737b0cd98e4f330ec84051f5"
 
   depends_on "cmake"
+  depends_on "doxygen"
 
   patch :p1 do
     url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_common_cmake.patch"
