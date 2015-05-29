@@ -14,7 +14,7 @@ class Bempp < Formula
   depends_on "numpy" => :python
   depends_on "scipy" => :python
 
-  depends_on "boost", :version => '>=1.57.0' 
+  depends_on "boost"
   depends_on "eigen"
   depends_on "tbb"
   depends_on "pkg-config"
