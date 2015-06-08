@@ -1,16 +1,16 @@
 class DuneFoamgrid < Formula
   homepage "http://users.dune-project.org/projects/dune-foamgrid"
-  url "http://users.dune-project.org/repositories/projects/dune-foamgrid.git", :using => :git, :revision => "0b03d67f4fa0f6cbf8d01e4accf8cdc8e32dae3e"
+  url "https://github.com/bempp/dune-foamgrid.git", :using => :git
 
   version "2.3-dev"
 
   depends_on "cmake"
   depends_on "bempp/bempp/dune-grid"
 
-  patch :p2 do
-    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_foamgrid_cmake.patch"
-    sha256 "c3ce317d95674c855229ea2f3e14a74363f28624d89e9eb28a1291ed8a228e16"
-  end
+#  patch :p2 do
+#    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_foamgrid_cmake.patch"
+#    sha256 "fd3e3e5622a0d4e25dca971f6857bb0148edcc1848babe419043df92d8f1b3cb"
+#  end
 
   def install
 
