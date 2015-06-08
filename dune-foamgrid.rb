@@ -7,9 +7,9 @@ class DuneFoamgrid < Formula
   depends_on "cmake"
   depends_on "bempp/bempp/dune-grid"
 
-  patch :p1 do
+  patch :p2 do
     url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_foamgrid_cmake.patch"
-    sha256 "06b00b724de19c77b83e2e2f96cdf21e2a90813b4ad626b6f7a22d58b41011dd"
+    sha256 "c3ce317d95674c855229ea2f3e14a74363f28624d89e9eb28a1291ed8a228e16"
   end
 
   def install
