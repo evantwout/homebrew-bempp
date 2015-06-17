@@ -18,7 +18,6 @@ class Bempp < Formula
   depends_on "eigen"
   depends_on "tbb"
   depends_on "pkg-config"
-  depends_on "cgal"
   depends_on "gmsh" => "with-fltk"
 
   depends_on "cmake"
@@ -35,9 +34,10 @@ class Bempp < Formula
       args = std_cmake_args
       args.delete "-DCMAKE_CXX_FLAGS_RELEASE="
       args.delete "-DCMAKE_C_FLAGS_RELEASE="
-      args << "-DCMAKE_C_FLAGS_RELEASE=-O3 -march=native"
-      args << "-DCMAKE_CXX_FLAGS_RELEASE=-O3 -march=native"
+      args << "-DCMAKE_C_FLAGS_RELEASE=-O3 -march=native -DNDEBUG"
+      args << "-DCMAKE_CXX_FLAGS_RELEASE=-O3 -march=native -DNDEBUG"
       args << "-DWITH_TESTS=OFF"
+      args << "-DWITH_ALUGRID=ON"
       args << ".."
 
       system "cmake", *args
