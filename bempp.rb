@@ -37,7 +37,6 @@ class Bempp < Formula
       args << "-DCMAKE_C_FLAGS_RELEASE=-O3 -march=native -DNDEBUG"
       args << "-DCMAKE_CXX_FLAGS_RELEASE=-O3 -march=native -DNDEBUG"
       args << "-DWITH_TESTS=OFF"
-      args << "-DWITH_ALUGRID=ON"
       args << ".."
 
       system "cmake", *args
