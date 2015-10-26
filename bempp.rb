@@ -24,8 +24,7 @@ class Bempp < Formula
   depends_on "bempp/bempp/dune-grid"
   depends_on "bempp/bempp/dune-localfunctions"
   depends_on "bempp/bempp/dune-foamgrid"
-  depends_on "bempp/bempp/cython"
-  
+
   def install
 
     mkdir "build" do
