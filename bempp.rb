@@ -19,7 +19,6 @@ class Bempp < Formula
   depends_on "eigen"
   depends_on "tbb"
   depends_on "pkg-config"
-  depends_on "gmsh" => "with-fltk"
 
   depends_on "cmake"
   depends_on "bempp/bempp/dune-grid"
