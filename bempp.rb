@@ -2,11 +2,11 @@ class Bempp < Formula
   homepage "http://www.bempp.org"
   url "https://github.com/bempp/bempp.git", :using => :git
 
-  version "2.9.1"
+  version "2.9.9"
 
   devel do
       url "https://github.com/bempp/bempp.git", :using => :git, :branch => "development"
-      version "2.9.1"
+      version "2.9.9"
   end
 
 
@@ -24,8 +24,6 @@ class Bempp < Formula
   depends_on "bempp/bempp/dune-grid"
   depends_on "bempp/bempp/dune-localfunctions"
   depends_on "bempp/bempp/dune-foamgrid"
-  depends_on "bempp/bempp/pytest"
-  depends_on "bempp/bempp/mako"
   depends_on "bempp/bempp/cython"
   
   def install
