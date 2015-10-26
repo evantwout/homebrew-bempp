@@ -13,6 +13,7 @@ class Bempp < Formula
   depends_on :python
   depends_on "numpy" => :python
   depends_on "scipy" => :python
+  depends_on "cython" => :python
 
   depends_on "boost"
   depends_on "eigen"
