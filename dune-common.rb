@@ -16,6 +16,11 @@ class DuneCommon < Formula
     sha256 "2ee5fb8b51ea7606b03c0abc0631148dac0b879784b2e67e9bb29f3f2f3e44bc"
   end
 
+  patch :p0 do
+    url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_macros.patch"
+    sha256 "d961f5196ae65e6548c4df2c391301ed83d4bc122b1c7d23fe95cfd912ab8f10"
+  end
+
   def install
 
     mkdir "build" do
