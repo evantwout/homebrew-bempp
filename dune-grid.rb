@@ -9,7 +9,7 @@ class DuneGrid < Formula
 
   patch :p2 do
     url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_grid_cmake.patch"
-    sha256 "ff1f02cba57c9524658c1c06d0196af375e5f4689d1e992ad2511e4eb9f17c07"
+    sha256 "8d17c94e132766fcf1d88c8e8d77021f632ba68a35f71cd372376b651b5063bf"
   end
 
   def install
