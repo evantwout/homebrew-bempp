@@ -7,7 +7,7 @@ class DuneGrid < Formula
   depends_on "bempp/bempp/dune-common"
   depends_on "bempp/bempp/dune-geometry"
 
-  patch :p1 do
+  patch :p2 do
     url "https://raw.githubusercontent.com/bempp/homebrew-patches/master/dune_grid_cmake.patch"
     sha256 "ff1f02cba57c9524658c1c06d0196af375e5f4689d1e992ad2511e4eb9f17c07"
   end
