@@ -2,7 +2,7 @@ class Bempp < Formula
   homepage "http://www.bempp.org"
   url "https://github.com/bempp/bempp.git", :using => :git
 
-  version "3.0.0"
+  version "3.0.1"
 
   depends_on :python
   depends_on "numpy" => :python
